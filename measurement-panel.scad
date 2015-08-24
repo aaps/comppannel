@@ -3,43 +3,43 @@ module voorplaat(holeleft, holeright, holebottom, holetop, holeradius)
 {
 	difference() {
 		union() {
-			cube([75.96, 68.28, 1], center = true);
+			square([75.96, 68.28], center = true);
 		}
 		union() {
 			//links boven baut gat
-			translate([holetop,holeleft,0])
+			translate([holetop,holeleft])
 			{
-				cylinder(h = 200, r=holeradius, center = true);
+				circle(h = 200, r=holeradius, center = true);
 			}
 			//rechts boven baut gat
-			translate([holetop,holeright,0])
+			translate([holetop,holeright])
 			{
-				cylinder(h = 200, r=holeradius, center = true);
+				circle(h = 200, r=holeradius, center = true);
 			}
 			//rechts onder baut gat
-			translate([holebottom,holeright,0])
+			translate([holebottom,holeright])
 			{
-				cylinder(h = 200, r=holeradius, center = true);
+				circle(h = 200, r=holeradius, center = true);
 			}
 			//links onder baut gat
-			translate([holebottom,holeleft,0])
+			translate([holebottom,holeleft])
 			{
-				cylinder(h = 200, r=holeradius, center = true);
+				circle(h = 200, r=holeradius, center = true);
 			}
 			// knopje gat
-			translate([29,-24.2,0])
+			translate([29,-24.2])
 			{
-				cube([13.5, 15, 10], center = true);
+				square([13.5, 15], center = true);
 			}
 			//socket gat
-			translate([-20.37,-24.2,0])
+			translate([-20.37,-24.2])
 			{
-				cube([33, 15, 10], center = true);
+				square([33, 15], center = true);
 			}
 			//scherm gat
-			translate([0,12.9,0])
+			translate([0,12.9])
 			{
-				cube([57, 38, 10], center = true);
+				square([57, 38], center = true);
 			}
 		}
 	}
@@ -50,28 +50,28 @@ module achterplaat(holeleft, holeright, holebottom, holetop, holeradius)
 
 difference() {
 		union() {
-			cube([75.96, 68.28, 1], center = true);
+			square([75.96, 68.28], center = true);
 		}
 		union() {
 			//links boven baut gat
-			translate([holetop,holeleft,0])
+			translate([holetop,holeleft])
 			{
-				cylinder(h = 200, r=holeradius, center = true);
+				circle(h = 200, r=holeradius, center = true);
 			}
 			//rechts boven baut gat
-			translate([holetop,holeright,0])
+			translate([holetop,holeright])
 			{
-				cylinder(h = 200, r=holeradius, center = true);
+				circle(h = 200, r=holeradius, center = true);
 			}
 			//rechts onder baut gat
-			translate([holebottom,holeright,0])
+			translate([holebottom,holeright])
 			{
-				cylinder(h = 200, r=holeradius, center = true);
+				circle(h = 200, r=holeradius, center = true);
 			}
 			//links onder baut gat
-			translate([holebottom,holeleft,0])
+			translate([holebottom,holeleft])
 			{
-				cylinder(h = 200, r=holeradius, center = true);
+				circle(h = 200, r=holeradius, center = true);
 			}
 		}
 	}
